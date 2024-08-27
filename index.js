@@ -5,6 +5,8 @@ const homeRoutes = require('./Routes/homeRoutes');
 const productRoutes = require('./Routes/productRoutes');
 const app = express();
 
+app.use(express.json());
+
 app.listen(3000, () => console.log('server is running on port'));
 
 app.use('/', homeRoutes);
